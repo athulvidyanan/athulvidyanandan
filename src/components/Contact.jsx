@@ -8,13 +8,32 @@ const Contact = () => {
         email: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // In a real app, integrate via API here
-        console.log(formData);
-        alert("Message sent successfully!");
-        setFormData({ name: '', email: '', message: '' });
+        setIsSubmitting(true);
+
+        const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfC2uNKtDx98fsy3WqcLyTv_sg2dvCBM8Xufaw6dKFjnWv0Qg/formResponse";
+        const formDataObj = new FormData();
+        formDataObj.append("entry.1534901172", formData.name);
+        formDataObj.append("entry.1878805187", formData.email);
+        formDataObj.append("entry.1112066673", formData.message);
+
+        try {
+            await fetch(formUrl, {
+                method: "POST",
+                mode: "no-cors",
+                body: formDataObj
+            });
+            alert("Message sent successfully!");
+            setFormData({ name: '', email: '', message: '' });
+        } catch (error) {
+            console.error("Error submitting form", error);
+            alert("There was an error sending your message. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e) => {
@@ -127,10 +146,11 @@ const Contact = () => {
 
                             <button
                                 type="submit"
-                                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+                                disabled={isSubmitting}
+                                className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-purple-600/50 disabled:cursor-not-allowed text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-[0.98]"
                             >
-                                Send Message
-                                <Send size={18} />
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                                {!isSubmitting && <Send size={18} />}
                             </button>
                         </form>
                     </motion.div>
