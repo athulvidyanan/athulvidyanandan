@@ -5,24 +5,24 @@ import { ExternalLink, GitBranch, Database } from 'lucide-react';
 const Projects = () => {
     const projectList = [
         {
-            title: "Enterprise Data Pipeline",
-            description: "Designed and implemented a scalable ETL pipeline using AWS Glue, S3, and Redshift, processing over 10TB of structured and unstructured data daily.",
+            title: "AI Resume Screener",
+            description: "Designed and developed an AI-powered resume screening system that analyzes candidate resumes using NLP techniques to match job requirements. The system automates shortlisting by extracting key skills, experience, and qualifications, improving recruitment efficiency and decision-making.",
             techStack: ["AWS Glue", "Python", "Redshift", "S3"],
-            githubLink: "#",
+            githubLink: "https://github.com/athulvidyanan/AI-Resume-Screener",
             liveLink: "#"
         },
         {
-            title: "Real-time Analytics Dashboard",
-            description: "Developed a comprehensive dashboard to visualize user behavior metrics and operational KPIs, reducing reporting time by 60%.",
+            title: "Technical Analysis Automation System",
+            description: "Built an automated system that applies traditional technical analysis strategies to financial data, eliminating manual calculations. The system processes market indicators and generates actionable insights, improving accuracy and efficiency in trading decision-making.",
             techStack: ["React", "Python", "SQL", "Tableau"],
-            githubLink: "#",
+            githubLink: "",
             liveLink: "#"
         },
         {
-            title: "Predictive Maintenance Model",
-            description: "Built a machine learning model to predict equipment failure before it happens, saving an estimated $200k annually in operational costs.",
+            title: "Student Record Manager",
+            description: "Developed a student record management system to efficiently store, manage, and retrieve student data. The application enables CRUD operations, ensuring organized data handling and improved accessibility for academic management.",
             techStack: ["Python", "scikit-learn", "Pandas", "Jupyter"],
-            githubLink: "#",
+            githubLink: "https://github.com/athulvidyanan/StudentRecordManager",
             liveLink: "#"
         },
         {
