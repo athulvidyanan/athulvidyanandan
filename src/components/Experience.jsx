@@ -5,11 +5,11 @@ import { Briefcase, Calendar } from 'lucide-react';
 const Experience = () => {
     const experiences = [
         {
-            title: "Data Analyst",
-            company: "IBM",
-            period: "2020 - Present",
-            description: "Led data analytics initiatives, optimized ETL pipelines resulting in 30% faster data processing, and built comprehensive dashboards using Tableau and Python to drive business decisions.",
-            skills: ["Python", "SQL", "Tableau", "AWS"]
+            title: "Business Analyst & Marketing Manager",
+            company: "Edumax Educational Consultancy",
+            period: "2024 - Present",
+            description: "Led data analytics initiatives, optimized ETL pipelines resulting in 30% faster data processing, and built comprehensive dashboards using Tableau and Python to drive business decisions.Also implemented marketing startegies to improve the client attention",
+            skills: ["Python", "SQL", "Tableau", "AWS","Photoshop","Canva"]
         },
         {
             title: "Freelance Data Analyst & Creator",
