@@ -40,9 +40,7 @@ const About = () => {
                         <h3 className="text-2xl font-semibold mb-6">Data Professional & Creator</h3>
 
                         <p className="text-gray-400 mb-6 leading-relaxed">
-                            With around 4 years of experience at IBM, I specialize in building robust data pipelines,
-                            analyzing complex datasets, and deriving insights that matter. My expertise spans across
-                            data engineering, cloud technologies, and analytics.
+                            I am a data-driven problem solver who believes in deep analysis as the foundation of everything I do—whether in technology, business, or real-world decision making. With experience in data analytics and cloud technologies, I focus on transforming complex data into meaningful insights that drive impact, building efficient solutions, automating processes, and continuously optimizing performance. Beyond analytics, I bring a creative perspective as a content creator, blending logic with creativity, while actively exploring DevOps, Security Engineering, and AI-driven automation to innovate and scale solutions.
                         </p>
                         <p className="text-gray-400 mb-8 leading-relaxed">
                             Beyond the tech world, I am a passionate content creator focusing on travel and lifestyle,
